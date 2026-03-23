@@ -14,12 +14,19 @@
   },
   "dependencies": {
     "@nuxt/eslint": "1.15.2",
+    "@nuxt/icon": "2.2.1",
+    "@nuxtjs/color-mode": "4.0.0",
+    "@tailwindcss/vite": "^4.2.2",
     "nuxt": "^4.4.2",
+    "tailwindcss": "^4.2.2",
     "vue": "^3.5.30",
-    "vue-router": "^5.0.3"
+    "vue-router": "^5.0.3",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^7.7.3",
+    "@iconify-json/tabler": "^1.2.31",
+    "daisyui": "^5.5.19",
     "eslint": "^10.1.0",
     "eslint-plugin-format": "^2.0.1",
     "husky": "^9.1.7",
