@@ -12,6 +12,7 @@ export default withNuxt(antfu({
     semi: true,
     quotes: "double",
   },
+  ignores: [".pnpm-store/**", "**/migrations/*"],
 }, {
   rules: {
     "ts/no-redeclare": "off",
