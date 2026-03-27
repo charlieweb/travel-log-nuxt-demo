@@ -8,6 +8,12 @@ export default defineNuxtConfig({
   css: ["./app/assets/css/main.css"],
   nitro: {
     preset: "vercel",
+    externals: {
+      inline: ["vue"],
+    },
+  },
+  build: {
+    transpile: ["vue"],
   },
   modules: [
     "@nuxt/eslint",
