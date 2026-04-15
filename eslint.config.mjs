@@ -12,9 +12,17 @@ export default withNuxt(antfu({
     semi: true,
     quotes: "double",
   },
-  ignores: [".pnpm-store/**", "**/migrations/*"],
+  ignores: [".pnpm-store/**", "**/migrations/*", "**/*.md/**", "**/*.md"],
 }, {
   rules: {
+    "vue/max-attributes-per-line": ["error", {
+      singleline: {
+        max: 3,
+      },
+      multiline: {
+        max: 1,
+      },
+    }],
     "ts/no-redeclare": "off",
     "ts/consistent-type-definitions": ["error", "type"],
     "no-console": ["warn"],
@@ -26,4 +34,5 @@ export default withNuxt(antfu({
       ignore: ["README.md"],
     }],
   },
+
 }));

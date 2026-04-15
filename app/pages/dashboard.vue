@@ -20,12 +20,29 @@ function toggleSidebar() {
         <Icon v-else name="tabler:chevron-right" size="32" />
       </div>
       <div class="flex flex-col">
-        <SidebarButtton :show-label="isSidebarOpen" icon="tabler:map" label="Locations" url="/dashboard" />
-        <SidebarButtton :show-label="isSidebarOpen" icon="tabler:circle-plus-filled" label="Add Location" url="/add" />
+        <SidebarButtton
+          :show-label="isSidebarOpen"
+          icon="tabler:map"
+          label="Locations"
+          url="/dashboard"
+        />
+        <SidebarButtton
+          :show-label="isSidebarOpen"
+          icon="tabler:circle-plus-filled"
+          label="Add Location"
+          url="/dashboard/add"
+        />
         <div class="divider" />
-        <SidebarButtton :show-label="isSidebarOpen" icon="tabler:logout-2" label="Sign Out" url="/sign-out" />
+        <SidebarButtton
+          :show-label="isSidebarOpen"
+          icon="tabler:logout-2"
+          label="Sign Out"
+          url="/sign-out"
+        />
       </div>
     </div>
-    <div class="flex-1" />
+    <div class="flex-1">
+      <NuxtPage />
+    </div>
   </div>
 </template>
