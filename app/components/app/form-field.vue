@@ -4,6 +4,7 @@ const props = defineProps<{
   label: string;
   name: string;
   type?: "text" | "textarea";
+  disabled?: boolean;
 }>();
 </script>
 
@@ -17,6 +18,7 @@ const props = defineProps<{
       :name="props.name"
       :type="type || 'text'"
       class="input w-full"
+      :disabled="disabled"
       :class="{
         'input-error': props.error,
         'input': !type || type === 'text',
