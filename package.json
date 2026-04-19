@@ -13,18 +13,21 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@better-auth/drizzle-adapter": "^1.6.5",
     "@nuxt/eslint": "1.15.2",
     "@nuxt/icon": "2.2.1",
     "@nuxtjs/color-mode": "4.0.0",
     "@pinia/nuxt": "0.11.3",
     "@tailwindcss/vite": "^4.2.2",
     "@vee-validate/nuxt": "^4.15.1",
+    "@vee-validate/yup": "^4.15.1",
     "@vee-validate/zod": "^4.15.1",
-    "better-auth": "^1.5.6",
+    "better-auth": "^1.6.5",
     "dotenv": "^17.3.1",
     "drizzle-orm": "^0.45.1",
     "drizzle-zod": "^0.8.3",
     "nuxt": "^4.4.2",
+    "nuxt-csurf": "1.6.5",
     "postgres": "^3.4.8",
     "tailwindcss": "^4.2.2",
     "vue": "^3.5.30",
@@ -41,6 +44,11 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
     "tsx": "^4.21.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "unimport": "5.6.0"
+    }
   },
   "lint-staged": {
     "*": "pnpm lint"

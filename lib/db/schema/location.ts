@@ -4,7 +4,9 @@ import { z } from "zod";
 import { user } from "./auth";
 
 export const location = pgTable("location", {
-  id: text("id").primaryKey(),
+  id: text("id")
+    .primaryKey()
+    .$defaultFn(() => crypto.randomUUID()),
   name: text("name").notNull(),
   slug: text("slug").notNull().unique(),
   description: text("description"),

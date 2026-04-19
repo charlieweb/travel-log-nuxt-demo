@@ -5,6 +5,11 @@ import "./lib/env";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
+  typescript: {
+    tsConfig: {
+      include: ["../lib/types.ts"],
+    },
+  },
   css: ["./app/assets/css/main.css"],
   nitro: {
     preset: "vercel",
@@ -21,7 +26,9 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@pinia/nuxt",
     "@vee-validate/nuxt",
+    "nuxt-csurf",
   ],
+
   eslint: {
     config: {
       standalone: false,
