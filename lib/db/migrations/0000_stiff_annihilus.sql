@@ -56,7 +56,8 @@ CREATE TABLE "location" (
 	"user_id" text NOT NULL,
 	"created_at" timestamp DEFAULT now() NOT NULL,
 	"updated_at" timestamp NOT NULL,
-	CONSTRAINT "location_slug_unique" UNIQUE("slug")
+	CONSTRAINT "location_slug_unique" UNIQUE("slug"),
+	CONSTRAINT "location_name_user_id_unique" UNIQUE("name","user_id")
 );
 --> statement-breakpoint
 CREATE TABLE "locationLog" (

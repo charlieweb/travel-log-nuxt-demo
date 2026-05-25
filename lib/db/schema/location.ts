@@ -1,4 +1,4 @@
-import { pgTable, real, text, timestamp } from "drizzle-orm/pg-core";
+import { pgTable, real, text, timestamp, unique } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 import { user } from "./auth";
@@ -15,7 +15,9 @@ export const location = pgTable("location", {
   userId: text("user_id").notNull().references(() => user.id),
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at").notNull().$onUpdate(() => new Date()),
-});
+}, t => [
+  unique().on(t.name, t.userId),
+]);
 
 export const InsertLocationSchema = createInsertSchema(location, {
   name: () =>
@@ -45,3 +47,5 @@ export const InsertLocationSchema = createInsertSchema(location, {
   createdAt: true,
   updatedAt: true,
 });
+
+export type InsertLocationSchema = z.infer<typeof InsertLocationSchema>;

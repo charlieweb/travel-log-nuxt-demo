@@ -1,5 +1,5 @@
 {
-  "id": "6772cf86-acae-43ad-abf1-03fc78fafc2f",
+  "id": "ae4ab0bb-e667-49dc-a64f-20f2f03de128",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -441,6 +441,14 @@
           "nullsNotDistinct": false,
           "columns": [
             "slug"
+          ]
+        },
+        "location_name_user_id_unique": {
+          "name": "location_name_user_id_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "name",
+            "user_id"
           ]
         }
       },
